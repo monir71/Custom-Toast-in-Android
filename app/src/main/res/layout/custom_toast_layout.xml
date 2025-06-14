@@ -3,28 +3,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/custom_toast_view"
+    android:id="@+id/custom_toast_view_container"
     android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/custom_toast_txt"
+    <LinearLayout
+        android:id="@+id/custom_toast_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:background="#E40B0B"
-        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="#FDFDFD"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_margin="20sp"
-        android:paddingBottom="20sp"
-        android:paddingTop="20sp"
-        android:paddingStart="20sp"
-        android:paddingEnd="20sp"/>
+        android:background="#FF5722"
+        android:gravity="center">
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/baseline_message_24"/>
+
+            <TextView
+                android:id="@+id/custom_toast_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingStart="20sp"
+                android:textColor="@color/white"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
